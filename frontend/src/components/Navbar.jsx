@@ -17,13 +17,13 @@ const Navbar = () => {
     <nav className="bg-white dark:bg-gray-800 shadow-md sticky top-0 z-50 transition-colors duration-500">
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
-          {/* Logo */}
+        
           <Link to="/" className="flex items-center space-x-2">
             <span className="text-2xl font-bold text-primary">🍳</span>
             <span className="text-2xl font-bold text-primary">Recipe Haven</span>
           </Link>
 
-          {/* Navigation Links */}
+          
           <div className="hidden md:flex items-center space-x-6">
             <Link to="/" className="text-light-text dark:text-dark-text hover:text-primary transition-colors duration-300 font-medium">
               Home
@@ -43,7 +43,7 @@ const Navbar = () => {
             )}
           </div>
 
-          {/* Auth Buttons & Dark Mode Toggle */}
+        
           <div className="flex items-center space-x-4">
             <button
               onClick={toggleDarkMode}
@@ -78,7 +78,7 @@ const Navbar = () => {
           </div>
         </div>
 
-        {/* Mobile Menu */}
+        
         <div className="md:hidden mt-4 pt-4 border-t border-gray-200 dark:border-gray-700">
           <div className="flex flex-col space-y-3">
             <Link to="/" className="text-light-text dark:text-dark-text hover:text-primary transition-colors duration-300 font-medium">

@@ -39,6 +39,6 @@ Thumbs.db
 *.pem
 
 # Backend specific
-backend/public/images/*
-!backend/public/images/.gitkeep
+# backend/public/images/*
+# !backend/public/images/.gitkeep
 

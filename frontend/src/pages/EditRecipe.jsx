@@ -49,7 +49,7 @@ const EditRecipe = () => {
       const file = e.target.files[0];
       setFormData({ ...formData, coverImage: file });
       
-      // Create preview
+
       if (file) {
         const reader = new FileReader();
         reader.onloadend = () => {

@@ -4,34 +4,26 @@ const cors = require('cors');
 const path = require('path');
 const connectDB = require('./config/database');
 
-// Load env vars
 dotenv.config();
 
-// Connect to database
 connectDB();
 
-// Initialize express
 const app = express();
 
-// Middleware
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// Serve static files
 app.use(express.static(path.join(__dirname, 'public')));
 
-// Routes
 app.use('/auth', require('./routes/authRoutes'));
 app.use('/recipe', require('./routes/recipeRoutes'));
 app.use('/user', require('./routes/userRoutes'));
 
-// Health check
 app.get('/health', (req, res) => {
   res.status(200).json({ message: 'Server is running' });
 });
 
-// Error handling middleware
 app.use((err, req, res, next) => {
   console.error(err.stack);
   

@@ -1,9 +1,7 @@
 const asyncHandler = require('../middleware/asyncHandler');
 const User = require('../models/User');
 
-// @desc    Get user by ID
-// @route   GET /user/:id
-// @access  Public
+
 exports.getUserById = asyncHandler(async (req, res) => {
   const user = await User.findById(req.params.id).select('-password');
 

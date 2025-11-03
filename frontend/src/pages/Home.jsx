@@ -68,7 +68,6 @@ const Home = () => {
         </p>
       </div>
 
-      {/* Search Bar */}
       <div className="mb-8">
         <input
           type="text"

@@ -42,7 +42,7 @@ const RecipeDetails = () => {
 
     try {
       await toggleFavoriteAPI(id);
-      await fetchRecipe(); // Refresh to get updated favorite status
+      await fetchRecipe();
     } catch (error) {
       console.error('Error toggling favorite:', error);
     }
@@ -103,7 +103,6 @@ const RecipeDetails = () => {
 
   return (
     <div className="container mx-auto px-4 py-12 max-w-5xl">
-      {/* Image */}
       <div className="relative mb-8 rounded-xl overflow-hidden shadow-lg">
         <img
           src={imageUrl}
@@ -124,9 +123,7 @@ const RecipeDetails = () => {
         )}
       </div>
 
-      {/* Content */}
       <div className="card p-8">
-        {/* Header */}
         <div className="mb-6">
           <h1 className="text-4xl md:text-5xl font-bold text-light-text dark:text-dark-text mb-4">
             {recipe.title}
@@ -153,7 +150,6 @@ const RecipeDetails = () => {
           </div>
         </div>
 
-        {/* Ingredients */}
         <div className="mb-8">
           <h2 className="text-2xl font-bold text-primary mb-4 flex items-center">
             <span className="mr-2">🥘</span> Ingredients
@@ -170,7 +166,6 @@ const RecipeDetails = () => {
           </div>
         </div>
 
-        {/* Instructions */}
         <div>
           <h2 className="text-2xl font-bold text-primary mb-4 flex items-center">
             <span className="mr-2">📝</span> Instructions
@@ -183,7 +178,6 @@ const RecipeDetails = () => {
         </div>
       </div>
 
-      {/* Back Button */}
       <div className="mt-8">
         <Link to="/" className="btn-primary">
           ← Back to Home

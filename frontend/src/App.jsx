@@ -12,7 +12,7 @@ import AddRecipe from './pages/AddRecipe';
 import EditRecipe from './pages/EditRecipe';
 import RecipeDetails from './pages/RecipeDetails';
 
-// Protected Route Component
+
 const ProtectedRoute = ({ children }) => {
   const { user, loading } = useContext(AuthContext);
 
